@@ -20,6 +20,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor='#007bff'/>
       <Text style={styles.title}>CALCULE SEU IMC</Text>
       <Text style={styles.textInput}>PESO:</Text>
       <TextInput style={styles.input} keyboardType='numeric'placeholder='Peso (Kg)' placeholderTextColor={"#FFF"} value={peso} onChangeText={(peso)=> setPeso(peso)}/>
@@ -37,15 +38,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    marginTop: 30
+    
   },
   title:{
     fontSize:20,
     fontWeight: 'bold',
-    marginTop: 50
+    marginTop: 40,
+    backgroundColor: "#007bff",
+    width: "100%",
+    textAlign: "center",
+    color:"#FFF",
+    height: "10%",
+    borderBottomLeftRadius:20,
+    borderBottomRightRadius:20,
+    justifyContent:"center"
   },
   input:{
-    width: "100%",
+    width: "90%",
     backgroundColor: "#000",
     marginRight: 20,
     marginLeft:20,
@@ -56,7 +65,8 @@ const styles = StyleSheet.create({
   },
   textInput:{
     alignItems:"flex-start",
-    marginRight: 350,
+    //marginRight: 350,
+    marginRight: "70%",
     fontSize: 20,
     marginTop:20
   },
